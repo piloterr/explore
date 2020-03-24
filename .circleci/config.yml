@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     environment:
-      CC_TEST_REPORTER_ID: 36ce37289599be258441f2455d447a7624b8c41ed604b00c0e6f9c880af852cd
+      CC_TEST_REPORTER_ID: d269a89f5c347200c7e9c863e71759e69c8fa01f4bfab4de7064192e41805128
     docker:
       - image: circleci/ruby:2.6.3-node-browsers
       - image: circleci/postgres:9.4
