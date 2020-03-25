@@ -32,7 +32,7 @@ gem 'webpacker', '~> 4.2', '>= 4.2.2'
 # gem 'image_processing', '~> 1.2'
 
 group :development, :test do
-  gem 'bullet', '~> 6.0.2'
+  gem 'bullet', '~> 6.1.0'
   gem 'factory_bot_rails', '~> 5.1', '>= 5.1.1'
   gem 'pry-byebug', '~> 3.7', platform: :mri
   gem 'rspec-rails', '~> 4.0'
