@@ -125,6 +125,7 @@ GEM
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
     crass (1.0.6)
+    database_cleaner (1.8.3)
     delayed_job (4.1.8)
       activesupport (>= 3.0, < 6.1)
     delayed_job_active_record (4.1.4)
@@ -446,6 +447,7 @@ DEPENDENCIES
   bootsnap (~> 1.4, >= 1.4.5)
   brakeman (~> 4.7, >= 4.7.1)
   bullet (~> 6.1.0)
+  database_cleaner
   delayed_job_active_record (~> 4.1, >= 4.1.4)
   devise (~> 4.7.1)
   devise_token_auth (~> 1.1, >= 1.1.3)

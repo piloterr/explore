@@ -8,20 +8,23 @@ module Api
 
       def create
         @task = Task.new(task_params)
-        return unless @task.save
 
-        render :create, status: :created
-      end
-
-      def show
-        render :show
+        if @task.save
+          @task.user_id = current_user.id
+          render :create, status: :created
+        else
+          render json: { errors: @task.errors.full_messages }, status: :unprocessable_entity
+        end
       end
 
       def update
         @task = Task.find(params[:id])
-        Task.update(task_params) if @task.save
-
-        render :update, status: :created
+        if @task.save
+          Task.update(task_params)
+          render :update, status: :created
+        else
+          render json: { errors: @task.errors.full_messages }, status: :unprocessable_entity
+        end
       end
 
       def destroy
@@ -31,7 +34,7 @@ module Api
       private
 
       def task_params
-        params.require(:task).permit(:title, :due_at, :is_completed, :user_id)
+        params.require(:task).permit(:title, :due_at, :is_completed)
       end
     end
   end
