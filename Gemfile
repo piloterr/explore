@@ -33,7 +33,7 @@ gem 'webpacker', '~> 5.0'
 
 group :development, :test do
   gem 'bullet', '~> 6.1.0'
-  gem 'factory_bot_rails', '~> 5.1', '>= 5.1.1'
+  gem 'factory_bot_rails', '~> 6.0'
   gem 'pry-byebug', '~> 3.7', platform: :mri
   gem 'rspec-rails', '~> 4.0'
 end
